@@ -1,3 +1,11 @@
+GIT
+  remote: https://github.com/stympy/faker.git
+  revision: 4555159b7da9813235395d271b1b65a32407086b
+  branch: master
+  specs:
+    faker (2.5.0)
+      i18n (>= 1.6, < 1.8)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -156,6 +164,7 @@ GEM
     selenium-webdriver (3.142.6)
       childprocess (>= 0.5, < 4.0)
       rubyzip (>= 1.2.2)
+    smarter_csv (1.2.6)
     spring (2.1.0)
     spring-watcher-listen (2.0.1)
       listen (>= 2.7, < 4.0)
@@ -203,12 +212,14 @@ DEPENDENCIES
   bootsnap (>= 1.4.2)
   byebug
   capybara (>= 2.15)
+  faker!
   jbuilder (~> 2.7)
   listen (>= 3.0.5, < 3.2)
   puma (~> 3.11)
   rails (~> 6.0.0)
   sass-rails (~> 5)
   selenium-webdriver
+  smarter_csv
   spring
   spring-watcher-listen (~> 2.0.0)
   sqlite3 (~> 1.4)
