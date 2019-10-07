@@ -1,2 +1,16 @@
-<h1>Books#show</h1>
-<p>Find me in app/views/books/show.html.erb</p>
+<h1><%= @book.title%></h1>
+<p>
+  <strong>Written by: </strong>
+  <%@book.authors.each do |author|%>
+    <%= author == @book.authors.last ? author.name : author.name + ','%>
+  <%end%>
+<p>
+  <strong>Genres: </strong>
+          <%@book.genres.each do |genre|%>
+            <%= genre == @book.genres.last ? genre.name : genre.name + ','%>
+          <%end%>
+  </p>
+<p>
+  <img src="<%= @book.image%>" alt="<%= @book.title%>" style="width:250px;height:300px;display:inline-block;float:left;margin-right: 10px;">
+  <%= @book.description%>
+</p>
