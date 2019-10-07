@@ -2,7 +2,7 @@
 <ul>
   <%@authors.each do |author|%>
     <li>
-      <%= author.name%>
+      <a href="http://localhost:3000/authors/<%= author.id%>"><%= author.name%></a>
     </li>
   <%end%>
 </ul>
