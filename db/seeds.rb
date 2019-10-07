@@ -30,7 +30,7 @@ books[0..200].each do |csv_book|
     # puts author.inspect
     BookAuthor.create(book: book, author: author)
   end
-  csv_genres.each do |g|
+  csv_genres.uniq.each do |g|
     genre = Genre.find_or_create_by(name: g)
     BookGenre.create(book: book, genre: genre)
   end
