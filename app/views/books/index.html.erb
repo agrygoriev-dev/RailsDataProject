@@ -1,2 +1,21 @@
-<h1>Books#index</h1>
-<p>Find me in app/views/books/index.html.erb</p>
+<h1>Available books:</h1>
+<h2>Total books in the library: <%= @books.count%></h2>
+<ul>
+  <% @books.each do |book|%>
+    <li>
+      <a href="http://localhost:3000/books/<%= book.id%>"><%= book.title%></a>
+      <p>
+        <strong>Written by: </strong>
+        <%book.authors.each do |author|%>
+          <%= author == book.authors.last ? author.name : author.name + ','%>
+        <%end%>
+      </p>
+      <p>
+        <strong>Genres: </strong>
+        <%book.genres.each do |genre|%>
+          <%= genre == book.genres.last ? genre.name : genre.name + ','%>
+        <%end%>
+      </p>
+    </li>
+  <%end%>
+</ul>
