@@ -1,10 +1,12 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
-  get 'authors/index'
-  get 'authors/show'
-  get 'genres/index'
-  get 'genres/show'
+  get '/authors', to: 'authors#index'
+  get '/authors/:id', to: 'authors#show', id: /\d+/
+
+  get '/genres', to: 'genres#index'
+  get '/genres/:id', to: 'genres#show', id: /\d+/
+
   get '/books', to: 'books#index'
   get '/books/:id', to: 'books#show', id: /\d+/
 
